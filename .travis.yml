@@ -1,0 +1,10 @@
+language: java
+script:
+- ./gradlew build
+- sonar-scanner
+
+addons:
+  sonarcloud:
+    organization: "danielleberre-github"
+    token:
+      secure: $MYSONARTOKEN
