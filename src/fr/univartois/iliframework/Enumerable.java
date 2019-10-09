@@ -41,11 +41,11 @@ public class Enumerable<T> implements Iterable<T> {
 	/**
 	 * Factory method used to derive the type of the Enumerable from the Enumeration object.
 	 * 
-	 * @param <T> the type of the elements of adapted
+	 * @param <U> the type of the elements of adapted
 	 * @param adapted the Enumeration to iterate on in the for loop
 	 * @return an Enumerable object of the required type
 	 */
-	public static <T> Enumerable<T> of(Enumeration<T> adapted) {
+	public static <U> Enumerable<U> of(Enumeration<U> adapted) {
 		return new Enumerable<>(adapted);
 	}
 }
