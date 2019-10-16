@@ -29,6 +29,9 @@ dependencies {
 
     // Use JUnit Jupiter Engine for testing.
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.1'
+
+    // servlet
+    api 'javax.servlet:javax.servlet-api:4.0.1'
 }
 
 test {
