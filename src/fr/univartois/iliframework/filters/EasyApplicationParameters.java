@@ -41,5 +41,6 @@ public class EasyApplicationParameters implements ServletContextListener {
 	}
 	
 	public void contextDestroyed(ServletContextEvent sce) {
+		// nothing to do when the application is stopped
 	}
 }
