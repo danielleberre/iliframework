@@ -8,7 +8,6 @@ import java.util.Vector;
 
 import org.junit.jupiter.api.Test;
 
-import fr.univartois.iliframework.Enumerable;
 
 class EnumerableTest {
 

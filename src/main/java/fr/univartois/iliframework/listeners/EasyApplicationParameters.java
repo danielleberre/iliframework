@@ -1,13 +1,12 @@
-package fr.univartois.iliframework.filters;
+package fr.univartois.iliframework.listeners;
 
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-import javax.servlet.annotation.WebListener;
-
 import fr.univartois.iliframework.Enumerable;
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
+import jakarta.servlet.annotation.WebListener;
 
 /**
  * Application context listener to load parameters from a properties file
@@ -27,6 +26,7 @@ public class EasyApplicationParameters implements ServletContextListener {
 	 * 
 	 * The key/value pairs are loaded from the properties file to the ServletContext object.
 	 */
+    @Override
 	public void contextInitialized(ServletContextEvent sce) {
 		sce.getServletContext().log("Easy Application Parameter filter enabled");
 		String parametersFile = sce.getServletContext().getInitParameter("parametersFile");
@@ -40,6 +40,7 @@ public class EasyApplicationParameters implements ServletContextListener {
 		}
 	}
 	
+    @Override
 	public void contextDestroyed(ServletContextEvent sce) {
 		// nothing to do when the application is stopped
 	}

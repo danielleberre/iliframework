@@ -12,9 +12,7 @@ plugins {
 }
 
 repositories {
-    // Use jcenter for resolving dependencies.
-    // You can declare any Maven/Ivy/file repository here.
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -31,25 +29,14 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.1'
 
     // servlet
-    api 'javax.servlet:javax.servlet-api:4.0.1'
-    api 'javax.servlet.jsp:jsp-api:2.0'
+    compileOnly 'jakarta.servlet:jakarta.servlet-api:5.0.0'
+    compileOnly 'jakarta.servlet.jsp:jakarta.servlet.jsp-api:3.0.0'
 }
 
 test {
     // Use junit platform for unit tests
     useJUnitPlatform()
-}
-
-sourceSets {
-    main {
-         java {
-            srcDirs = ['src']
-         }
-    }
-
-    test {
-        java {
-            srcDirs = ['tst']
-        }
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
     }
 }

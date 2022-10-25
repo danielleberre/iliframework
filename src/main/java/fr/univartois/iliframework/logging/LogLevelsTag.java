@@ -1,7 +1,7 @@
 package fr.univartois.iliframework.logging;
 
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.tagext.TagSupport;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.tagext.TagSupport;
 
 /**
  * Tag to iterate over the verbosity levels.
