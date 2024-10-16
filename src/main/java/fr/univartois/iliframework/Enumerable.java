@@ -24,18 +24,7 @@ public class Enumerable<T> implements Iterable<T> {
 
 	@Override
 	public Iterator<T> iterator() {
-		return new Iterator<T>() {
-
-			@Override
-			public boolean hasNext() {
-				return adapted.hasMoreElements();
-			}
-
-			@Override
-			public T next() {
-				return adapted.nextElement();
-			}
-		};
+	    return adapted.asIterator();
 	}
 	
 	/**
